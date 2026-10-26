@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111111">
+  <meta name="description" content="Conheca nosso cardapio de hamburgueres artesanais, batatas fritas e bebidas.">
+  <title>Lanchonete | Sabor e Elegancia</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a href="#" class="logo"><span>✦</span> LANCHONETE</a>
+    <button class="cart-button" id="open-cart" aria-label="Abrir carrinho">
+      🛒 Carrinho <span id="cart-count">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <span class="eyebrow">SABOR ARTESANAL</span>
+        <h1>Seu momento.<br><span>Seu sabor.</span></h1>
+        <p>Ingredientes selecionados, hamburgueres irresistiveis e uma experiencia especial em cada pedido.</p>
+        <a href="#cardapio" class="gold-button">EXPLORAR CARDAPIO ↓</a>
+      </div>
+    </section>
+
+    <section class="menu-section" id="cardapio">
+      <div class="section-heading">
+        <span class="eyebrow">FEITO PARA VOCE</span>
+        <h2>Nosso <span>Cardapio</span></h2>
+        <p>Escolha seus favoritos e monte seu pedido.</p>
+      </div>
+
+      <nav class="categories" aria-label="Categorias do cardapio">
+        <button class="category active" data-category="todos">Todos</button>
+        <button class="category" data-category="hamburgueres">Hamburgueres</button>
+        <button class="category" data-category="batatas">Batatas</button>
+        <button class="category" data-category="bebidas">Bebidas</button>
+      </nav>
+
+      <div class="products-grid" id="products-grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="#" class="logo"><span>✦</span> LANCHONETE</a>
+    <p>Feito com sabor, servido com carinho.</p>
+    <small>© <span id="year"></span> Lanchonete. Todos os direitos reservados.</small>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="cart-panel" id="cart-panel"
+         role="dialog" aria-modal="true" aria-labelledby="cart-title"
+         aria-hidden="true">
+    <div class="cart-header">
+      <h2 id="cart-title">Seu pedido</h2>
+      <button class="close-cart" id="close-cart" aria-label="Fechar carrinho">✕</button>
+    </div>
+
+    <div class="cart-items" id="cart-items">
+      <p class="empty-cart">Seu carrinho esta vazio.</p>
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cart-total">R$ 0,00</strong>
+      </div>
+      <button class="checkout-button" id="checkout-button">
+        FINALIZAR PELO WHATSAPP
+      </button>
+      <small>O pedido sera enviado para confirmacao pelo WhatsApp.</small>
+    </div>
+  </aside>
+</body>
+</html>
